@@ -1,0 +1,147 @@
+.planetsPage {
+    padding: 2rem;
+  }
+  
+  .planetsPage h1 {
+    font-size: 2.5rem;
+    color: #4fc3f7;
+    margin-bottom: 2rem;
+  }
+  
+  .planetsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .planetCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .planetCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .planetHeader {
+    margin-bottom: 1rem;
+  }
+  
+  .planetHeader h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    color: #4fc3f7;
+  }
+  
+  .planetHeader p {
+    margin: 0;
+    opacity: 0.8;
+  }
+  
+  .planetImage {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .stationedSpacecrafts {
+    margin-top: 1rem;
+  }
+  
+  .stationedSpacecrafts h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .spacecraftItem {
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .spacecraftItem:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .spacecraftItem.selected {
+    background: rgba(79, 195, 247, 0.2);
+    border-left: 3px solid #4fc3f7;
+  }
+  
+  .dispatchPanel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 26, 0.9);
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .dispatchPanel h2 {
+    margin-top: 0;
+    color: #4fc3f7;
+  }
+  
+  .selectedSpacecraft {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .targetSelection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .planetSelect {
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: white;
+    min-width: 200px;
+  }
+  
+  .dispatchButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #4fc3f7;
+    color: #0a0a1a;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dispatchButton:hover:not(:disabled) {
+    background-color: #03a9f4;
+  }
+  
+  .dispatchButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .dispatchError {
+    color: #ff5252;
+    margin-top: 1rem;
+  }
+  
+  .error {
+    color: #ff5252;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }

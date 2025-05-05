@@ -1,0 +1,118 @@
+.spacecraftPage {
+    padding: 2rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    color: #4fc3f7;
+    margin: 0;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .backButton {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: #4fc3f7;
+    border: 1px solid #4fc3f7;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .backButton:hover {
+    background-color: #4fc3f7;
+    color: #0a0a1a;
+  }
+  
+  .decommissionButton {
+    padding: 0.5rem 1rem;
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .decommissionButton:hover {
+    background-color: #ff0000;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .imageContainer {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    height: fit-content;
+  }
+  
+  .spacecraftImage {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .placeholderImage {
+    padding: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .details {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .detailItem {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .detailItem h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #4fc3f7;
+  }
+  
+  .description {
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  
+  .id {
+    font-family: monospace;
+    opacity: 0.7;
+  }
+  
+  .error, .notFound {
+    color: #ff5252;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }

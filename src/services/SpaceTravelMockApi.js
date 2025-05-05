@@ -136,6 +136,7 @@ class SpaceTravelMockApi
     try
     {
       const mockDb = SpaceTravelMockApi.getMockDb();
+      console.log("Mock DB spacecrafts:", mockDb.spacecrafts);
       response.data = mockDb.spacecrafts;
     }
     catch (error)

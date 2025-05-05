@@ -1,0 +1,77 @@
+.homePage {
+    padding: 2rem;
+  }
+  
+  .heroSection {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+  }
+  
+  .heroSection h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #4fc3f7;
+  }
+  
+  .heroSection p {
+    font-size: 1.5rem;
+    opacity: 0.8;
+  }
+  
+  .features {
+    margin-top: 2rem;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #4fc3f7;
+  }
+  
+  .featureCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #4fc3f7;
+  }
+  
+  .card p {
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+  }
+  
+  .link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #4fc3f7;
+    color: #0a0a1a;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .link:hover {
+    background: #03a9f4;
+  }

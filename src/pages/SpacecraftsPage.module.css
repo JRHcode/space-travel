@@ -1,0 +1,109 @@
+.spacecraftsPage {
+    padding: 2rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    color: #4fc3f7;
+  }
+  
+  .buildButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #4fc3f7;
+    color: #0a0a1a;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buildButton:hover {
+    background-color: #03a9f4;
+  }
+  
+  .spacecraftList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .spacecraftCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .spacecraftCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .cardContent {
+    padding: 1.5rem;
+  }
+  
+  .cardContent h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #4fc3f7;
+  }
+  
+  .cardContent p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    opacity: 0.8;
+    font-style: italic;
+  }
+  
+  .cardActions {
+    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .detailsButton {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: #4fc3f7;
+    border: 1px solid #4fc3f7;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .detailsButton:hover {
+    background-color: #4fc3f7;
+    color: #0a0a1a;
+  }
+  
+  .error {
+    color: #ff5252;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .noSpacecrafts {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+  
+  .noSpacecrafts h2 {
+    color: #4fc3f7;
+    margin-bottom: 1rem;
+  }
