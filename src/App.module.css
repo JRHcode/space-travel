@@ -22,3 +22,22 @@
 .error-page i {
   color: rgba(255, 255, 255, 0.7);
 }
+
+.error-page {
+  padding: 2rem;
+  text-align: center;
+  color: #ff5252;
+}
+
+.error-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.error-page p {
+  margin-bottom: 0.5rem;
+}
+
+.error-page i {
+  color: rgba(255, 255, 255, 0.7);
+}

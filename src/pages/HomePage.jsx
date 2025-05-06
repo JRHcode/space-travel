@@ -6,7 +6,7 @@ function HomePage() {
     <div className={styles.homePage}>
       <div className={styles.heroSection}>
         <h1>Welcome to Space Travel</h1>
-        <p>Traverse the solar system with ease.</p>
+        <p>Traverse the solar system in our next generation starships.</p>
       </div>
       
       <div className={styles.features}>
@@ -30,7 +30,7 @@ function HomePage() {
           
           <div className={styles.card}>
             <h3>Build New Spacecraft</h3>
-            <p>Construct new vessels to expand our fleet</p>
+            <p>Design a spacecraft to your specifications</p>
             <Link to="/spacecrafts/build" className={styles.link}>
               Build Now →
             </Link>

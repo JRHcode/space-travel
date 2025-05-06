@@ -145,3 +145,11 @@
     text-align: center;
     font-size: 1.2rem;
   }
+
+   .planetSelect:valid {
+     border-color: #4fc3f7;
+   }
+   
+   .planetSelect:invalid {
+     border-color: #ff5252;
+   }
