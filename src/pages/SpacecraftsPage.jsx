@@ -13,16 +13,14 @@ function SpacecraftsPage() {
     (state) => state.spaceTravel
   );
   
-  // Check for success messages from navigation state
+  
   useEffect(() => {
     if (location.state?.success) {
-      alert(location.state.success);
-      // Clear the state to prevent showing again on refresh
       window.history.replaceState({}, '');
     }
   }, [location]);
 
-  // Fetch spacecrafts if not already loaded
+  
   useEffect(() => {
     if (spacecrafts.length === 0 && status === 'idle') {
       dispatch(fetchSpacecrafts());
