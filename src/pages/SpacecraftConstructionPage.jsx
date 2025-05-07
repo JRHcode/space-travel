@@ -70,16 +70,20 @@ function SpacecraftConstructionPage() {
     e.preventDefault();
     
     if (!validateForm()) return;
-
+  
     try {
+      
       await dispatch(buildSpacecraft({
         name: formData.name,
         capacity: Number(formData.capacity),
         description: formData.description,
         pictureUrl: formData.pictureUrl || undefined
       })).unwrap();
-
-      await dispatch(fetchSpacecrafts());
+  
+      
+      dispatch(fetchSpacecrafts());
+  
+      
       navigate("/spacecrafts", { 
         state: { 
           success: `Successfully built ${formData.name}!` 

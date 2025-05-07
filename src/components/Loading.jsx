@@ -1,6 +1,6 @@
 import styles from "./Loading.module.css";
 
-function Loading({ message = "Loading..." }) {
+function Loading({ message = "Warp speed engaged..." }) {
   return (
     <div className={styles.loadingContainer}>
       <div className={styles.spinner}></div>

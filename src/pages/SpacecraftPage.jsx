@@ -46,7 +46,8 @@ function SpacecraftPage() {
     if (window.confirm("Are you sure you want to decommission this spacecraft?")) {
       try {
         await dispatch(destroySpacecraftById(id)).unwrap();
-        await dispatch(fetchSpacecrafts());
+        
+        dispatch(fetchSpacecrafts());
         navigate("/spacecrafts");
       } catch (error) {
         console.error("Decommission failed:", error);
@@ -54,12 +55,12 @@ function SpacecraftPage() {
     }
   };
 
-  // Show loading state during initial load
+
   if (initialLoad) {
     return <Loading message="Loading spacecraft details..." />;
   }
 
-  // Show error state if fetch failed
+  
   if (status === "failed") {
     return (
       <div className={styles.errorContainer}>
@@ -72,7 +73,7 @@ function SpacecraftPage() {
     );
   }
 
-  // Show not found only after loading is complete and no data exists
+  
   if (!currentSpacecraft) {
     return (
       <div className={styles.notFound}>
@@ -85,7 +86,7 @@ function SpacecraftPage() {
     );
   }
 
-  // Render spacecraft details
+  
   return (
     <div className={styles.spacecraftPage}>
       <div className={styles.header}>
