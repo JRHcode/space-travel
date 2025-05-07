@@ -31,14 +31,13 @@ export const fetchSpacecraftById = createAsyncThunk(
   }
 );
 
+
 export const buildSpacecraft = createAsyncThunk(
   'spaceTravel/buildSpacecraft',
-  async ({ name, capacity, description, pictureUrl }) => {
-    const response = await SpaceTravelApi.buildSpacecraft({ 
-      name, capacity, description, pictureUrl 
-    });
+  async (payload) => {
+    const response = await SpaceTravelApi.buildSpacecraft(payload);
     if (response.isError) throw new Error(response.data.message);
-    return response.data;
+    return response.data; 
   }
 );
 

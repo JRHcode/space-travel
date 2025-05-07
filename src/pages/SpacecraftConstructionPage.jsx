@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import { buildSpacecraft } from "../store/spaceTravelSlice";
+import { Link, useNavigate } from "react-router-dom"; // Added Link import
+import { buildSpacecraft, fetchSpacecrafts } from "../store/spaceTravelSlice";
 import Loading from "../components/Loading";
 import styles from "./SpacecraftConstructionPage.module.css";
 
@@ -29,7 +29,6 @@ function SpacecraftConstructionPage() {
       ...formData,
       [name]: value
     });
-    // Clear error when user types
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -79,15 +78,20 @@ function SpacecraftConstructionPage() {
         description: formData.description,
         pictureUrl: formData.pictureUrl || undefined
       })).unwrap();
-      
-      navigate("/spacecrafts");
+
+      await dispatch(fetchSpacecrafts());
+      navigate("/spacecrafts", { 
+        state: { 
+          success: `Successfully built ${formData.name}!` 
+        } 
+      });
     } catch (error) {
       console.error("Failed to build spacecraft:", error);
     }
   };
 
   if (status === "loading") {
-    return <Loading />;
+    return <Loading message="Building spacecraft..." />;
   }
 
   return (
@@ -163,8 +167,12 @@ function SpacecraftConstructionPage() {
         </div>
 
         <div className={styles.formActions}>
-          <button type="submit" className={styles.submitButton}>
-            Build Spacecraft
+          <button 
+            type="submit" 
+            className={styles.submitButton}
+            disabled={status === "loading"}
+          >
+            {status === "loading" ? "Building..." : "Build Spacecraft"}
           </button>
         </div>
       </form>

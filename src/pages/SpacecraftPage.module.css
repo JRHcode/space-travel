@@ -116,3 +116,29 @@
     text-align: center;
     font-size: 1.2rem;
   }
+
+  .errorContainer,
+.notFound {
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.errorContainer {
+  color: #ff5252;
+}
+
+.notFound {
+  color: #4fc3f7;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4fc3f7;
+  color: #0a0a1a;
+  border-radius: 4px;
+  text-decoration: none;
+}
